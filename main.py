@@ -11,7 +11,7 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 app = FastAPI()
 
-whisper = pipeline('automatic-speech-recognition',model= "openai/whisper-medium",device = 0)
+whisper = pipeline('automatic-speech-recognition',model= "openai/whisper-tiny",device = 0)
 
 app.include_router(auth.router)
 
